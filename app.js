@@ -6,6 +6,10 @@ var app = express();
 // Set port
 app.set('port', process.env.PORT || 8080);
 
+app.get('/', function(req, res) {
+    res.send("Hi! This is just a small timestamp microservice app. Input a unix or natural-language date as a URL parameter.");
+});
+
 app.get('/:date', function(req, res) {
 	var naturalDate = null, unixDate = null;
 	// if in unix time already
