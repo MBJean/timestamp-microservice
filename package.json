@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/MBJean/timestamp-microservice/issues"
   },
-  "homepage": "https://github.com/MBJean/timestamp-microservice#readme"
+  "homepage": "https://github.com/MBJean/timestamp-microservice#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
 }
