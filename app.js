@@ -20,7 +20,7 @@ app.get('/:date', function(req, res) {
 	// if in readable time
 	} else if (new Date(req.params.date).getTime() > 0) {
 		unixDate = new Date(req.params.date).getTime() / 1000;
-		naturalDate = req.params.date;
+		naturalDate = new Date(req.params.date).toString();
 	}
     res.json({ unix: unixDate, natural: naturalDate });
 });
