@@ -18,7 +18,7 @@ app.get('/:date', function(req, res) {
 		naturalDate = new Date(req.params.date * 1000).toString();
 	// if in readable time
 	} else if (new Date(req.params.date).getTime() > 0) {
-		unixDate = new Date(req.params.date).getTime();
+		unixDate = new Date(req.params.date).getTime() / 1000;
 		naturalDate = req.params.date;
 	}
     res.json({ unix: unixDate, natural: naturalDate });
